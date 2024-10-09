@@ -4,6 +4,7 @@
 /public/hot
 /public/storage
 /public/vendor/statamic
+/public/vendor/seo-pro
 /storage/*.key
 /vendor
 .env
