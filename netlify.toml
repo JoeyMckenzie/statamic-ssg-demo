@@ -1,6 +1,6 @@
 [build]
 publish = "storage/app/static"
-command = "npm install && npm run build && php please ssg:generate"
+command = "composer run build"
 
 [[plugins]]
 package = "@netlify/plugin-lighthouse"
