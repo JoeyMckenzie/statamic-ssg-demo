@@ -58,11 +58,13 @@
             "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
         ],
         "build": [
+            "rm -rf storage/app/static",
             "npm install",
             "npm run build",
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
             "@php artisan key:generate",
-            "@php please ssg:generate"
+            "@php please ssg:generate",
+            "cp -r public/build/assets storage/app/static/build"
         ]
     },
     "extra": {
