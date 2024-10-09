@@ -14,6 +14,7 @@
         "laravel/tinker": "^2.9",
         "spatie/fork": "^1.2",
         "statamic/cms": "^5.0",
+        "statamic/seo-pro": "^6.2",
         "statamic/ssg": "^3.0"
     },
     "require-dev": {

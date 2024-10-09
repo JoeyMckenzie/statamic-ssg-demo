@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "673360a9e8d67f5d234a5ccf6ccb08d9",
+    "content-hash": "30945db670ee5853a1e4d899e872fff4",
     "packages": [
         {
             "name": "ajthinking/archetype",
@@ -4621,6 +4621,52 @@
                 }
             ],
             "time": "2024-10-03T14:36:00+00:00"
+        },
+        {
+            "name": "statamic/seo-pro",
+            "version": "6.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/statamic/seo-pro.git",
+                "reference": "23afc52df1d5e5421e04407aa1d52c5179dd5988"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/statamic/seo-pro/zipball/23afc52df1d5e5421e04407aa1d52c5179dd5988",
+                "reference": "23afc52df1d5e5421e04407aa1d52c5179dd5988",
+                "shasum": ""
+            },
+            "require": {
+                "statamic/cms": "^5.0.0"
+            },
+            "require-dev": {
+                "laravel/pint": "^1.17",
+                "orchestra/testbench": "^8.0 || ^9.0",
+                "phpunit/phpunit": "^10.0"
+            },
+            "type": "library",
+            "extra": {
+                "statamic": {
+                    "name": "Seo Pro",
+                    "description": "An all-in-one site reporting, metadata mastering, OG managing, Twitter card making, sitemap generating addon."
+                },
+                "laravel": {
+                    "providers": [
+                        "Statamic\\SeoPro\\ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Statamic\\SeoPro\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "support": {
+                "issues": "https://github.com/statamic/seo-pro/issues",
+                "source": "https://github.com/statamic/seo-pro/tree/6.2.0"
+            },
+            "time": "2024-10-05T02:42:59+00:00"
         },
         {
             "name": "statamic/ssg",
