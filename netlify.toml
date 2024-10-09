@@ -1,0 +1,36 @@
+[build]
+publish = "storage/app/static"
+command = "npm install && npm run build && php please ssg:generate"
+
+[[plugins]]
+package = "@netlify/plugin-lighthouse"
+
+[build.environment]
+PHP_VERSION = "8.3"
+NODE_VERSION = "20"
+
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200
+
+[dev]
+command = "php artisan serve"
+targetPort = 8000
+port = 8888
+publish = "public"
+
+[[headers]]
+for = "/*"
+
+[headers.values]
+X-Frame-Options = "DENY"
+X-XSS-Protection = "1; mode=block"
+X-Content-Type-Options = "nosniff"
+Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Add any environment variables you need
+[context.production.environment]
+APP_ENV = "production"
+APP_DEBUG = "false"
+APP_URL = "https://willowy-cocada-50a90a.netlify.app"
